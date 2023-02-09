@@ -2,6 +2,7 @@ import 'package:eshopy/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/data.dart';
+import '../../widgets/custom_button.dart';
 
 class OnBoardScreen extends StatefulWidget {
   const OnBoardScreen({Key? key}) : super(key: key);
@@ -81,39 +82,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                   ),
                 ),
                 const SizedBox(width: 5),
-                ElevatedButton(
-                  onPressed: () {
-                    _pageController.nextPage(
-                        duration: const Duration(microseconds: 250),
-                        curve: Curves.easeIn);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shadowColor: kPrimaryColor,
-                    elevation: 5,
-                    backgroundColor: kWhiteColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text(
-                          'Next',
-                          style: TextStyle(color: kPrimaryColor),
-                        ),
-                        Icon(
-                          Icons.arrow_forward,
-                          color: kPrimaryColor,
-                          size: 16,
-                        )
-                      ],
-                    ),
-                  ),
-                )
+                CustomButton(pageController: _pageController, title: 'Next', icon: Icons.arrow_forward,)
               ],
             ),
           ),
@@ -122,6 +91,8 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
     );
   }
 }
+
+
 
 class OnboardContent extends StatelessWidget {
   const OnboardContent({
