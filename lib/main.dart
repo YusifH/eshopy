@@ -1,3 +1,5 @@
+import 'package:eshopy/constants/colors.dart';
+import 'package:eshopy/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'eShopy',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const Text('data'));
+      title: 'TeenStore',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: kWhiteColor
+      ),
+      home: const SplashScreen(),
+    );
   }
 }
