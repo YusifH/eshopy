@@ -1,4 +1,5 @@
 import 'package:eshopy/constants/colors.dart';
+import 'package:eshopy/screens/register/register.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/data.dart';
@@ -72,7 +73,13 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => const RegisterScreen()),
+                          (Route<dynamic> route) => false,
+                    );
+                  },
                   child: const Text(
                     'Skip',
                     style: TextStyle(
