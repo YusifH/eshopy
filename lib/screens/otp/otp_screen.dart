@@ -52,22 +52,31 @@ class OtpScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 75,
-                    width: 75,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.grey.shade200
-                    ),
-                    child: TextField(
-                      cursorColor: Theme.of(context).primaryColor,
-
-                    ),
-                  )
-                ],
+              child: Form(
+                child: Row(
+                  children: const [
+                    SizedBox(
+                      height: 68,
+                      width: 64,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              width: 3,
+                              color: Colors.grey
+                            )
+                          ),
+                          disabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Colors.grey
+                              )
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             )
           ],
