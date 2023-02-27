@@ -1,4 +1,5 @@
 import 'package:eshopy/constants/colors.dart';
+import 'package:eshopy/screens/register/register.dart';
 import 'package:eshopy/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
