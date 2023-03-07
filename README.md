@@ -1,6 +1,6 @@
 # eshopy
 
-eShopy application
+eShopy application test
 
 ## Getting Started
 
